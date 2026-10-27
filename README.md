@@ -143,3 +143,27 @@ The `.blockmap`, `.zip` and `latest*.yml` files are used by the auto-updater; yo
 Installers are not code-signed yet, which is why Windows and macOS show warnings. Starting with the next version, every release includes a **`SHA256SUMS.txt`** file listing each installer's fingerprint. Compare it with your file (`Get-FileHash` on Windows, `shasum -a 256` on macOS, `sha256sum -c SHA256SUMS.txt --ignore-missing` on Linux). If it doesn't match, don't run the file and let us know on Discord.
 
 ### Mod safety
+
+CurseForge and Modrinth mods are recognised by their fingerprint and downloaded from those platforms. Mods added by an unverified creator are reviewed by the team before being distributed. The launcher checks the fingerprint of every downloaded file and rejects anything modified or incomplete.
+
+### Features
+
+- 🔎 Vanilla and modded server catalogue, filterable by style and language.
+- ⭐ Community reviews and votes.
+- ⚡ One-click play: Java, loader and mods installed and verified automatically.
+- 👥 Friends and messages.
+- 🧰 Free creator space to list and manage your own server.
+- 🔐 Official Microsoft sign-in; your password is never sent to Aevum.
+- 💻 Windows, macOS and Linux.
+
+### About this repository
+
+This repository only hosts the **official releases** of Aevum Launcher (installers and auto-update files). Aevum's source code is **proprietary** and is not published here.
+
+Aevum Launcher builds on the open-source [Helios Launcher](https://github.com/dscalzi/HeliosLauncher) project by Daniel D. Scalzi, released under the MIT license.
+
+### Help
+
+Found a bug or missing a version/loader? **[Open a ticket on Discord](https://discord.gg/XqM8DKAS5Z)**.
+
+Aevum Launcher is an independent project. Not an official Minecraft product: not approved by or associated with Mojang Studios or Microsoft.
