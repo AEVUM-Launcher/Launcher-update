@@ -63,6 +63,22 @@ chmod +x Aevum-Launcher-setup-x.y.z.AppImage
 
 Une fois installé, **le launcher se met à jour tout seul** à chaque nouvelle version.
 
+## 🔐 Vérifier ton téléchargement
+
+Les installateurs ne sont pas encore signés numériquement, d'où les avertissements de Windows et macOS. À partir de la prochaine version, chaque release contient un fichier **`SHA256SUMS.txt`** avec l'empreinte de chaque installateur. Compare-la avec celle du fichier que tu as téléchargé :
+
+- **Windows (PowerShell)** : `Get-FileHash .\Aevum-Launcher-setup-x.y.z.exe`
+- **macOS** : `shasum -a 256 Aevum-Launcher-setup-x.y.z-arm64.dmg`
+- **Linux** : `sha256sum -c SHA256SUMS.txt --ignore-missing`
+
+Si l'empreinte ne correspond pas, ne lance pas le fichier et préviens-nous sur Discord.
+
+## 🧩 Sécurité des mods
+
+- Les mods **CurseForge** et **Modrinth** sont reconnus par leur empreinte et téléchargés depuis ces plateformes.
+- Les mods ajoutés par un créateur **non vérifié** sont validés par l'équipe avant d'être distribués aux joueurs.
+- Le launcher contrôle l'empreinte de **chaque fichier** téléchargé (mods, configs, bibliothèques) et rejette tout fichier modifié ou incomplet.
+
 ## ✨ Ce que fait Aevum
 
 - 🔎 **Un catalogue de serveurs** vanilla et moddés, à parcourir par style et par langue.
@@ -83,6 +99,12 @@ Télécharge Aevum, ouvre l'**espace Créateur** et crée ta fiche. Un serveur v
 - Le jeu ne se lance pas : dans le launcher, va dans *Paramètres → À propos → Réparer les fichiers du jeu*.
 
 > ⚠️ Aevum est encore en développement : n'hésite pas à signaler ce qui ne va pas !
+
+## 🔒 À propos de ce dépôt
+
+Ce dépôt sert uniquement à **publier les versions officielles** d'Aevum Launcher (installateurs et fichiers de mise à jour automatique). Le code source d'Aevum est **propriétaire** et n'est pas publié ici.
+
+Aevum Launcher s'appuie sur le projet open source [Helios Launcher](https://github.com/dscalzi/HeliosLauncher) de Daniel D. Scalzi, distribué sous licence MIT.
 
 ## 📄 Informations légales
 
@@ -116,18 +138,8 @@ Grab the installer from the **[latest release](https://github.com/AEVUM-Launcher
 
 The `.blockmap`, `.zip` and `latest*.yml` files are used by the auto-updater; you don't need them. Once installed, the launcher **updates itself**.
 
-### Features
+### Verify your download
 
-- 🔎 Vanilla and modded server catalogue, filterable by style and language.
-- ⭐ Community reviews and votes.
-- ⚡ One-click play: Java, loader and mods installed and verified automatically.
-- 👥 Friends and messages.
-- 🧰 Free creator space to list and manage your own server.
-- 🔐 Official Microsoft sign-in; your password is never sent to Aevum.
-- 💻 Windows, macOS and Linux.
+Installers are not code-signed yet, which is why Windows and macOS show warnings. Starting with the next version, every release includes a **`SHA256SUMS.txt`** file listing each installer's fingerprint. Compare it with your file (`Get-FileHash` on Windows, `shasum -a 256` on macOS, `sha256sum -c SHA256SUMS.txt --ignore-missing` on Linux). If it doesn't match, don't run the file and let us know on Discord.
 
-### Help
-
-Found a bug or missing a version/loader? **[Open a ticket on Discord](https://discord.gg/XqM8DKAS5Z)**.
-
-Aevum Launcher is an independent project. Not an official Minecraft product: not approved by or associated with Mojang Studios or Microsoft.
+### Mod safety
